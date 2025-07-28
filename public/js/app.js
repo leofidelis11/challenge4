@@ -102,7 +102,7 @@ async function handleForgotPassword(event) {
         const result = await response.json();
         
         if (result.success) {
-            showStatusMessage('Password reset email sent successfully!', 'success');
+            showStatusMessage('Password reset. Your new password is "newpassword".', 'success');
             // Clear form
             document.getElementById('forgotPasswordForm').reset();
             M.updateTextFields();
