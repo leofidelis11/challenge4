@@ -30,8 +30,8 @@
         <div class="row">
             <div class="col s12">
                 <!-- Status Messages -->
-                <div id="status-message" class="card-panel" style="display: none;">
-                    <span id="status-text"></span>
+                <div id="status-message" class="card-panel" style="display: none;" data-qa="status-message">
+                    <span id="status-text" data-qa="status-text"></span>
                 </div>
 
                 <!-- Login Form -->
@@ -42,24 +42,24 @@
                             <div class="row">
                                 <div class="input-field col s12">
                                     <i class="material-icons prefix">account_circle</i>
-                                    <input id="username" type="text" class="validate" required>
-                                    <label for="username">Username</label>
+                                    <input id="username" type="text" class="validate" data-qa="username-field" required>
+                                    <label for="username" data-qa="username-label">Username</label>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="input-field col s12">
                                     <i class="material-icons prefix">lock</i>
-                                    <input id="password" type="password" class="validate" required>
-                                    <label for="password">Password</label>
+                                    <input id="password" type="password" class="validate" data-qa="password-field" required>
+                                    <label for="password" data-qa="password-label">Password</label>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col s12">
-                                    <button class="btn waves-effect waves-light blue darken-3" type="submit">
+                                    <button class="btn waves-effect waves-light blue darken-3" type="submit" data-qa="login-button">
                                         Login
                                         <i class="material-icons right">send</i>
                                     </button>
-                                    <a href="#" onclick="showForgotPasswordForm()" class="waves-effect waves-teal btn-flat">
+                                    <a href="#" onclick="showForgotPasswordForm()" class="waves-effect waves-teal btn-flat" data-qa="forgot-password-link">
                                         Forgot Password?
                                     </a>
                                 </div>
