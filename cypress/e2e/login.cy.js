@@ -3,24 +3,20 @@ describe('Login', () => {
         cy.visit('http://localhost:4000');
     });
     it('should login successfully', () => {
-        cy.get('[data-qa="username-field"]').click().type('alice');
-        cy.get('[data-qa="password-label"]').click().type('password123');
-        cy.get('[data-qa="login-button"]').click();
+        cy.loginWith('alice', 'password123');
+  
         cy.get('[data-qa="status-text"]').should('have.text', 'Login successful! Welcome back.');
     });
 
     it('should return error if password is invalid', () => {
-        cy.get('[data-qa="username-field"]').click().type('alice');
-        cy.get('[data-qa="password-label"]').click().type('wrongpassword');
-        cy.get('[data-qa="login-button"]').click();
+        cy.loginWith('alice', 'wrongpassword');
+
         cy.get('[data-qa="status-text"]').should('have.text', 'Invalid username or password');
     });
 
-    it('shouldn\'t allow sign in attempt with empty username field', () => {
-        
-        cy.get('[data-qa="password-label"]').click().type('password123');
-        cy.get('[data-qa="login-button"]').click();
-        // Check that the form doesn't submit by verifying the username field is still empty
+    it('shouldn\'t allow sign in attempt with empty username field', () => {        
+        cy.loginWith('', 'password123');
+
         cy.get('[data-qa="username-field"]').should('have.value', '');
         cy.get('[data-qa="password-field"]').should('have.value', 'password123');
         // Verify no success message appears (form submission was prevented)
