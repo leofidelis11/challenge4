@@ -24,17 +24,15 @@ describe('Login', () => {
     });
 
     it('shouldn\'t allow sign in attempt with empty password field', () => {
-        
-        cy.get('[data-qa="username-field"]').click().type('charlie');
-        cy.get('[data-qa="login-button"]').click();
-        cy.get('[data-qa="username-field"]').should('have.value', 'charlie');
+        cy.loginWith('charlie', '');
+
         cy.get('[data-qa="password-field"]').should('have.value', '');
         cy.get('[data-qa="status-text"]').should('not.be.visible');
     });
 []
     it('should return error if account is blocked due too many failed login attempts', () => {
-        cy.get('[data-qa="username-field"]').type('dave');
-        cy.get('[data-qa="password-label"]').click().type('wrongpassword');
+        cy.loginWith('dave', 'wrongpassword');
+
         Cypress._.times(3, () => {
             cy.get('[data-qa="login-button"]').click();
           });
