@@ -1,4 +1,4 @@
-Cypress.Commands.add("PerformLoginWith", (username, password) => {
+Cypress.Commands.add("performLoginWith", (username, password) => {
   cy.visit("http://localhost:4000");
   cy.get('[data-qa="username-field"]').as("username");
   cy.get('[data-qa="password-label"]').as("passwordLabel");

@@ -1,6 +1,6 @@
 describe("Login", () => {
   it("should login successfully", () => {
-    cy.PerformLoginWith("alice", "password123");
+    cy.performLoginWith("alice", "password123");
 
     cy.get('[data-qa="status-text"]').should(
       "have.text",
@@ -9,7 +9,7 @@ describe("Login", () => {
   });
 
   it("Should fail to login with invalid password", () => {
-    cy.PerformLoginWith("alice", "wrongpassword");
+    cy.performLoginWith("alice", "wrongpassword");
 
     cy.get('[data-qa="status-text"]').should(
       "have.text",
@@ -18,7 +18,7 @@ describe("Login", () => {
   });
 
   it("Should fail to login with invalid username", () => {
-    cy.PerformLoginWith("invalidUser", "password123");
+    cy.performLoginWith("invalidUser", "password123");
 
     cy.get('[data-qa="status-text"]').should(
       "have.text",
@@ -27,7 +27,7 @@ describe("Login", () => {
   });
 
   it("shouldn't allow sign in attempt with empty username field", () => {
-    cy.PerformLoginWith("", "password123");
+    cy.performLoginWith("", "password123");
 
     cy.get('[data-qa="username-field"]').should("have.value", "");
     cy.get('[data-qa="password-field"]').should("have.value", "password123");
@@ -36,14 +36,14 @@ describe("Login", () => {
   });
 
   it("shouldn't allow sign in attempt with empty password field", () => {
-    cy.PerformLoginWith("charlie", "");
+    cy.performLoginWith("charlie", "");
 
     cy.get('[data-qa="password-field"]').should("have.value", "");
     cy.get('[data-qa="status-text"]').should("not.be.visible");
   });
 
   it("should return error if account is blocked due too many failed login attempts", () => {
-    cy.PerformLoginWith("dave", "wrongpassword");
+    cy.performLoginWith("dave", "wrongpassword");
 
     Cypress._.times(3, () => {
       cy.get('[data-qa="login-button"]').click();
