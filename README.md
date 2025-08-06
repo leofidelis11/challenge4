@@ -230,4 +230,12 @@ MIT License - see LICENSE file for details
 
 - [MaterializeCSS](https://materializecss.com/) for the UI framework
 - [Challenge 3 API](https://github.com/leofidelis11/challenge3) for the backend API
-- Express.js team for the web framework 
+- Express.js team for the web framework
+
+## Contributors
+
+- David Costa Souto
+- Isabelle Faria
+- Karina Nascimento
+- Leonardo Fidelis
+- Lucas Dias
