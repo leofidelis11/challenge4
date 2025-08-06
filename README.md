@@ -234,8 +234,8 @@ MIT License - see LICENSE file for details
 
 ## Contributors
 
-- David Costa Souto
-- Isabelle Faria
-- Karina Nascimento
-- Leonardo Fidelis
-- Lucas Dias
+- [David Costa Souto](https://github.com/davidcsouto)
+- [Isabelle Faria](https://github.com/CodeIsa)
+- [Karina Nascimento](https://github.com/karinaNascimento100)
+- [Leonardo Fidelis](https://github.com/leofidelis11)
+- [Lucas Dias](https://github.com/DiasLuc)
