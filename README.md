@@ -46,8 +46,8 @@ Challenge4/
 │       └── app.js            # Frontend JavaScript
 ├── server.js                 # Express server
 ├── package.json              # Dependencies and scripts
-├── config.env               # Environment configuration
-└── README.md                # Project documentation
+├── config.env                # Environment configuration
+└── README.md                 # Project documentation
 ```
 
 ## Prerequisites
