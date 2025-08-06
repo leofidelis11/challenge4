@@ -1,16 +1,16 @@
 describe("Forgot Password", () => {
-    it("Should provide new password when provided valid email", () => {
+    it("Should provide new password when valid email is entered", () => {
       cy.performForgotPassword("grace@example.com");
 
-      cy.get('#status-text').should(
+      cy.get('[data-qa="status-text"]').should(
         "have.text",
         "Password reset. Your new password is \"newpassword\".");
     });
 
-    it("Should provide 'email not found' message when provided invalid email", () => {
+    it("Should display 'email not found' message when invalid email is entered", () => {
         cy.performForgotPassword("invalidemail@example.com");
         
-        cy.get('#status-text').should(
+        cy.get('[data-qa="status-text"]').should(
           "have.text",
           "Email not found");
       });
