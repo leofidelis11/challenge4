@@ -1,5 +1,5 @@
 describe("Login", () => {
-  it("should login successfully", () => {
+  it("Should login successfully", () => {
     cy.performLoginWith("alice", "password123");
 
     cy.get('[data-qa="status-text"]').should(
@@ -26,7 +26,7 @@ describe("Login", () => {
     );
   });
 
-  it("shouldn't allow sign in attempt with empty username field", () => {
+  it("Shouldn't allow sign in attempt with empty username field", () => {
     cy.performLoginWith("", "password123");
 
     cy.get('[data-qa="username-field"]').should("have.value", "");
@@ -35,14 +35,14 @@ describe("Login", () => {
     cy.get('[data-qa="status-text"]').should("not.be.visible");
   });
 
-  it("shouldn't allow sign in attempt with empty password field", () => {
+  it("Shouldn't allow sign in attempt with empty password field", () => {
     cy.performLoginWith("charlie", "");
 
     cy.get('[data-qa="password-field"]').should("have.value", "");
     cy.get('[data-qa="status-text"]').should("not.be.visible");
   });
 
-  it("should return error if account is blocked due too many failed login attempts", () => {
+  it("Should return error if account is blocked due too many failed login attempts", () => {
     cy.performLoginWith("dave", "wrongpassword");
 
     Cypress._.times(3, () => {
