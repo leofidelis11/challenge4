@@ -9,8 +9,6 @@ cypress/
 ├── e2e/
 │   ├── login.cy.js           # Login functionality tests
 │   └── forgotPassword.cy.js  # Password recovery tests
-├── fixtures/
-│   └── example.json          # Test data (mock data)
 ├── support/
 │   ├── commands.js           # Custom Cypress commands
 │   └── e2e.js               # Global test configurations
@@ -204,13 +202,13 @@ npm run test:headed
 
 ### Forgot Password Tests (`forgotPassword.cy.js`)
 
-_Note: This file is empty and needs to be implemented._
-
-Suggested tests to implement:
-
-- Password recovery with valid email
-- Password recovery with invalid email
-- Empty form validation
+1. **Forgot Password Successful**: Provide new password with valid e-mail
+   - Email: `grace@example.com`
+   - Expected result: "Password reset. Your new password is \"newpassword\"."
+  
+2. **Forgot Password Failed - Invalid Email**: Display "email not found" message
+   - Email: `invalidemail@example.com`
+   - Expected result: "Email not found"
 
 ## Cypress Configuration
 
@@ -314,3 +312,4 @@ When adding new tests:
 ---
 
 **Note**: This project uses Cypress v14.5.3. For different versions, some commands may vary. Consult the official documentation for your specific version.
+
