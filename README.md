@@ -2,6 +2,14 @@
 
 A responsive web application that consumes the login API from [Challenge 3](https://github.com/leofidelis11/challenge3). Built with HTML, CSS, JavaScript, Express.js, and MaterializeCSS following the MVC design pattern.
 
+## Contributors
+
+- [David Costa Souto](https://github.com/davidcsouto)
+- [Isabelle Faria](https://github.com/CodeIsa)
+- [Karina Nascimento](https://github.com/karinaNascimento100)
+- [Leonardo Fidelis](https://github.com/leofidelis11)
+- [Lucas Dias](https://github.com/DiasLuc)
+
 ## Features
 
 - **Login System**: Connect to external API for authentication
@@ -231,11 +239,3 @@ MIT License - see LICENSE file for details
 - [MaterializeCSS](https://materializecss.com/) for the UI framework
 - [Challenge 3 API](https://github.com/leofidelis11/challenge3) for the backend API
 - Express.js team for the web framework
-
-## Contributors
-
-- [David Costa Souto](https://github.com/davidcsouto)
-- [Isabelle Faria](https://github.com/CodeIsa)
-- [Karina Nascimento](https://github.com/karinaNascimento100)
-- [Leonardo Fidelis](https://github.com/leofidelis11)
-- [Lucas Dias](https://github.com/DiasLuc)
